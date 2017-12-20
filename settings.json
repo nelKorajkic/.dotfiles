@@ -1,34 +1,45 @@
 {
-    "editor.fontSize": 14,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<esc>"]
-        }
+	"editor.fontSize": 14,
+	"vim.insertModeKeyBindings": [
+			{
+					"before": ["j", "k"],
+					"after": ["<esc>"]
+			}
 ],
 "workbench.iconTheme": "material-icon-theme",
 "workbench.colorTheme": "Dracula",
 "vim.useCtrlKeys": false,
 "vim.useSystemClipboard": true,
 "vim.otherModesKeyBindingsNonRecursive": [
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["k"],
-        "after": ["g", "k"]
-    }
-    ],
-    "editor.tabSize": 2,
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": true
-    },
-    "editor.snippetSuggestions": "top",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "editor.wordWrap": "on",
-    "prettier.useTabs": true,
-    "editor.insertSpaces": false,
+	{
+			"before": ["j"],
+			"after": ["g", "j"]
+	},
+	{
+			"before": ["k"],
+			"after": ["g", "k"]
+	}
+	],
+	"editor.tabSize": 2,
+	"editor.quickSuggestions": {
+			"other": true,
+			"comments": false,
+			"strings": true
+	},
+	"editor.snippetSuggestions": "top",
+	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+	"editor.wordWrap": "on",
+	"prettier.useTabs": true,
+	"editor.insertSpaces": false,
+	"workbench.editor.labelFormat": "medium",
+	"window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+	"editor.detectIndentation": false,
+	"editor.matchBrackets": true,
+	"bracketPairColorizer.timeOut": 0,
+	"highlight-matching-tag.style": {
+		"borderWidth": "1px",
+		"borderStyle": "solid",
+		"borderColor": "rgba(255,255,0,.5)",
+		"borderRadius": "2px",
+		"padding": "1px",
 }
