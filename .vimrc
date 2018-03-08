@@ -2,15 +2,17 @@
  " nelKorajkic's settings
  "============================================================
  syntax on
- colors base16-dracula
- let base16colorspace=256
- set termguicolors
- set smartindent
+ colorscheme industry
  set t_Co=256
+ "set termguicolors
+if &term =~ '256color'
+     set t_ut=
+endif
+
+ set smartindent
  highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
-
  call plug#begin('~/.vim/plugged')
-
+ Plug 'theJian/vim-fethoi'
  Plug 'scrooloose/nerdtree'
  Plug 'Valloric/YouCompleteMe'
  Plug 'ctrlpvim/ctrlp.vim'
@@ -20,13 +22,13 @@
 
  set number " show line numbers
  set relativenumber
-
- set clipboard=unnamed " use os clipboard 
+ set clipboard=unnamedplus
+ "set clipboard=unnamed " use os clipboard 
  set shiftwidth=2 " number of spaces when shift indenting
  set tabstop=2 " number of visual spaces per tab
  set softtabstop=2 " number of spaces in tab when editing
  set expandtab " tab to spaces
- set cursorline  " highlight current line
+"set cursorline  " highlight current line
  set showmatch " highlight matching [{()}]
  set incsearch " search as characters are entered
  set hlsearch " highlight matches
@@ -44,8 +46,6 @@
  nnoremap <c-k> <c-w>k
  nnoremap <c-h> <c-w>h
  nnoremap <c-l> <c-w>l
-
-
  inoremap jk <Esc>
  let g:ctrlp_map = '<c-p>'
  let g:ctrlp_cmd = 'CtrlP'
@@ -54,3 +54,4 @@
  map <C-b> :NERDTreeToggle<CR>
  :nmap <c-s> :w<CR>
  :imap <c-s> <Esc>:w<CR>a
+
