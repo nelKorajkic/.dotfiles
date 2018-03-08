@@ -2,16 +2,21 @@
  " nelKorajkic's settings
  "============================================================
  syntax on
- colorscheme industry
  set t_Co=256
- "set termguicolors
-if &term =~ '256color'
-     set t_ut=
+ set termguicolors
+ if &term =~ '256color'
+  set t_ut=
 endif
 
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
  set smartindent
- highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
  call plug#begin('~/.vim/plugged')
+ Plug 'rafi/awesome-vim-colorschemes'
+ Plug 'pangloss/vim-javascript'
+ Plug 'mxw/vim-jsx'
+ Plug 'nightsense/stellarized'
  Plug 'theJian/vim-fethoi'
  Plug 'scrooloose/nerdtree'
  Plug 'Valloric/YouCompleteMe'
@@ -19,7 +24,10 @@ endif
  Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
  call plug#end()
-
+"let base16colorspace="256"
+ colorscheme OceanicNext
+ "set background=dark
+ highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
  set number " show line numbers
  set relativenumber
  set clipboard=unnamedplus
@@ -28,7 +36,7 @@ endif
  set tabstop=2 " number of visual spaces per tab
  set softtabstop=2 " number of spaces in tab when editing
  set expandtab " tab to spaces
-"set cursorline  " highlight current line
+set cursorline  " highlight current line
  set showmatch " highlight matching [{()}]
  set incsearch " search as characters are entered
  set hlsearch " highlight matches
@@ -54,4 +62,5 @@ endif
  map <C-b> :NERDTreeToggle<CR>
  :nmap <c-s> :w<CR>
  :imap <c-s> <Esc>:w<CR>a
+
 
