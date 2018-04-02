@@ -18,7 +18,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set smartindent
 call plug#begin('~/.vim/plugged')
 
-" ======== INTERFACE SUPPORT  ======== 
+" ======== INTERFACE SUPPORT  ========
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 "Plug 'ryanoasis/vim-devicons'
@@ -37,10 +37,11 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
-" ======== REACT/JSX SUPPORT  ======== 
+" ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'epilande/vim-react-snippets'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -53,9 +54,11 @@ call plug#end()
 " ============ Prettier on save ===========
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+let g:prettier#config#bracket_spacing = 'true'
 
+" ============ general settings ===========
 let base16colorspace="256"
-colorscheme OceanicNext
+colorscheme seoul256
 "set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
@@ -86,7 +89,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers= ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
-
+" You gotta add a lint npm script to each package.json you want linting for
 set mouse=a
 
 let g:ctrlp_show_hidden=1
@@ -97,6 +100,10 @@ let g:airline#extensions#hunks#non_zero_only = 1
 "============================================================
 " Mappings
 "============================================================
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+noremap  <buffer> <silent> 0 g0
+noremap  <buffer> <silent> $ g$
 inoremap jk <Esc>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
