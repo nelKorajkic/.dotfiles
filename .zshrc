@@ -11,7 +11,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle jump
 antigen bundle ssh-agent
 
-antigen bundle sindresorhus/pure
+#antigen bundle sindresorhus/pure
 antigen theme terminalparty
 
 antigen apply
