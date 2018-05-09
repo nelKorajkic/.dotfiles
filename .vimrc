@@ -31,6 +31,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-syntastic/syntastic'
 Plug 'jakedouglas/exuberant-ctags'
 Plug 'sbdchd/neoformat'
+Plug 'https://github.com/miconda/lucariox.vim.git'
 Plug 'airblade/vim-gitgutter'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
@@ -58,7 +59,7 @@ let g:prettier#config#bracket_spacing = 'true'
 
 " ============ general settings ===========
 let base16colorspace="256"
-colorscheme seoul256
+colorscheme solarized8_flat
 "set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
@@ -111,4 +112,5 @@ let g:ctrlp_cmd = 'CtrlP'
 map <C-a> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
+
 
