@@ -12,7 +12,7 @@ antigen bundle jump
 antigen bundle ssh-agent
 
 #antigen bundle sindresorhus/pure
-antigen theme terminalparty
+antigen theme afowler
 
 antigen apply
 
@@ -25,4 +25,3 @@ alias t="TERM=st-256color tmux -2"
   emulate -L zsh
   ls 
  }
-
