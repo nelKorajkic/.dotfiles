@@ -13,7 +13,8 @@ set showmatch
 set scrolloff=3
 set switchbuf=useopen
 :let mapleader=","
-set wildmode=longest, list
+set wildmode=longest,list
+set nolist
 set autoread
 set nojoinspaces
 :set timeout timeoutlen=1000 ttimeoutlen=100
