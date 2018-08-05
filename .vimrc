@@ -1,15 +1,29 @@
-"============================================================
-" nelKorajkic's settings
-"============================================================
-set nocompatible
+" nelkorajkic's settings
+" set nocompatible
 set ruler
+set hidden
+set history=10000
+set expandtab
+set showtabline=2
 set showcmd
+set nobackup
+set nowritebackup
+set autoindent
+set showmatch
+set scrolloff=3
+set switchbuf=useopen
+:let mapleader=","
+set wildmode=longest, list
+set autoread
+set nojoinspaces
+:set timeout timeoutlen=1000 ttimeoutlen=100
+"set shell=bash
 set encoding=utf8
 syntax on
 set t_Co=256
 set termguicolors
 if &term =~ '256color'
- set t_ut=
+set t_ut=
 endif
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -59,7 +73,7 @@ let g:prettier#config#bracket_spacing = 'true'
 
 " ============ general settings ===========
 let base16colorspace="256"
-colorscheme solarized8_flat
+colorscheme OceanicNext
 "set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
@@ -74,8 +88,7 @@ set cursorline  " highlight current line
 set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
-set ignorecase
-set smartcase
+set ignorecase smartcase
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
 
 " ====== SYNTASTIC / GIT GUTTER SETTINGS =======
@@ -98,9 +111,7 @@ set laststatus=2
 set noswapfile
 "let g:jsx_ext_required=0
 let g:airline#extensions#hunks#non_zero_only = 1
-"============================================================
 " Mappings
-"============================================================
 noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
 noremap  <buffer> <silent> 0 g0
@@ -112,4 +123,5 @@ let g:ctrlp_cmd = 'CtrlP'
 map <C-a> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
+
 
