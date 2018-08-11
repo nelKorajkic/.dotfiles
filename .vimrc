@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
 " ======== INTERFACE SUPPORT  ========
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-commentary'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
