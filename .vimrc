@@ -126,4 +126,6 @@ map <C-a> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
 
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 
