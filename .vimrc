@@ -49,6 +49,7 @@ Plug 'jakedouglas/exuberant-ctags'
 Plug 'sbdchd/neoformat'
 Plug 'https://github.com/miconda/lucariox.vim.git'
 Plug 'airblade/vim-gitgutter'
+Plug 'dbeniamine/cheat.sh-vim'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -86,6 +87,7 @@ set shiftwidth=2 " number of spaces when shift indenting
 set tabstop=2 " number of visual spaces per tab
 set softtabstop=2 " number of spaces in tab when editing
 set expandtab " tab to spaces
+set bs=2 "fix backspace in insert
 set cursorline  " highlight current line
 set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
