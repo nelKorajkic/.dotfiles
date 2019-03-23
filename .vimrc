@@ -7,7 +7,34 @@
  set termguicolors
  set smartindent
  set t_Co=256
+ set splitbelow splitright
  highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
+ augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Easier to type, and I never use the default behavior.
+noremap H ^
+noremap L $
+
+nnoremap <leader>et :vsplit ~/.tmux.conf<cr>
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+
+" Substitute
+nnoremap <c-s> :%s/
+vnoremap <c-s> :s/
+
+" Select (charwise) the contents of the current line, excluding indentation.
+" Great for pasting Python lines into REPLs.
+nnoremap vv ^vg_
 
  call plug#begin('~/.vim/plugged')
 
