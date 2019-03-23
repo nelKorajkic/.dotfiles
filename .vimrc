@@ -21,7 +21,7 @@
  set number " show line numbers
  set relativenumber
 
- set clipboard=unnamed " use os clipboard 
+ set clipboard+=unnamed " use os clipboard 
  set shiftwidth=2 " number of spaces when shift indenting
  set tabstop=2 " number of visual spaces per tab
  set softtabstop=2 " number of spaces in tab when editing
@@ -31,7 +31,7 @@
  set incsearch " search as characters are entered
  set hlsearch " highlight matches
  set ignorecase
- set smartcase 
+ set smartcase
  set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
  let g:ctrlp_show_hidden=1
  set noswapfile
