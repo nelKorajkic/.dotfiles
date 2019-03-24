@@ -2,13 +2,7 @@
  " nelKorajkic's settings
  "============================================================
  syntax on
- colors base16-dracula
- let base16colorspace=256
- set termguicolors
- set smartindent
- set t_Co=256
  set splitbelow splitright
- highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
  augroup line_return
     au!
     au BufReadPost *
@@ -36,34 +30,6 @@ vnoremap <c-s> :s/
 " Great for pasting Python lines into REPLs.
 nnoremap vv ^vg_
 
- call plug#begin('~/.vim/plugged')
-
- Plug 'scrooloose/nerdtree'
- Plug 'Valloric/YouCompleteMe'
- Plug 'ctrlpvim/ctrlp.vim'
- Plug 'jeffkreeftmeijer/vim-numbertoggle'
-
- call plug#end()
-
- set number " show line numbers
- set relativenumber
-
- set clipboard+=unnamed " use os clipboard 
- set shiftwidth=2 " number of spaces when shift indenting
- set tabstop=2 " number of visual spaces per tab
- set softtabstop=2 " number of spaces in tab when editing
- set expandtab " tab to spaces
- set cursorline  " highlight current line
- set showmatch " highlight matching [{()}]
- set incsearch " search as characters are entered
- set hlsearch " highlight matches
- set ignorecase
- set smartcase
- set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
- let g:ctrlp_show_hidden=1
- set noswapfile
- let g:jsx_ext_required=0
-
  "============================================================
  " Mappings
  "============================================================
@@ -71,19 +37,10 @@ nnoremap vv ^vg_
  nnoremap <c-k> <c-w>k
  nnoremap <c-h> <c-w>h
  nnoremap <c-l> <c-w>l
-
-
- inoremap jk <Esc>
- let g:ctrlp_map = '<c-p>'
- let g:ctrlp_cmd = 'CtrlP'
  map <C-Left> <Esc>:bprev<CR>
  map <C-Right> <Esc>:bnext<CR>
- map <C-b> :NERDTreeToggle<CR>
- :nmap <c-s> :w<CR>
- :imap <c-s> <Esc>:w<CR>a
-=======
-" nelkorajkic's settings
-" set nocompatible
+
+set nocompatible
 set ruler
 set hidden
 set history=10000
@@ -96,7 +53,7 @@ set autoindent
 set showmatch
 set scrolloff=3
 set switchbuf=useopen
-:let mapleader=","
+:let mapleader=" "
 set wildmode=longest,list
 set nolist
 set autoread
@@ -165,7 +122,7 @@ colorscheme OceanicNext
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
 set relativenumber
-set clipboard=unnamedplus
+set clipboard+=unnamed
 "set clipboard=unnamed " use os clipboard
 set shiftwidth=2 " number of spaces when shift indenting
 set tabstop=2 " number of visual spaces per tab
@@ -194,23 +151,15 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 " You gotta add a lint npm script to each package.json you want linting for
 set mouse=a
 
-let g:ctrlp_show_hidden=1
-set laststatus=2
-set noswapfile
-"let g:jsx_ext_required=0
-let g:airline#extensions#hunks#non_zero_only = 1
+
 " Mappings
 noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
 noremap  <buffer> <silent> 0 g0
 noremap  <buffer> <silent> $ g$
-inoremap jk <Esc>
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 map <C-a> :NERDTreeToggle<CR>
-:nmap <c-s> :w<CR>
-:imap <c-s> <Esc>:w<CR>a
+
 
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
