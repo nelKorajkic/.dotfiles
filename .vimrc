@@ -172,3 +172,7 @@ map <silent><Leader><S-p> :set paste<CR>O<esc>"*]p:set nopaste<cr>"
 
 "enter key = new line without entering insert mode
 nnoremap <CR> o<Esc>
+
+"move blocks of text
+vnoremap J :m ‘>+1gv=gv
+vnoremap K :m ‘<-2gv=gv
