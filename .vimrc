@@ -11,6 +11,13 @@
         \ endif
 augroup END
 
+augroup setSpelling
+  autocmd!
+
+  autocmd FileType gitcommit setlocal spell spelllang=en_us
+  autocmd FileType markdown setlocal spell spelllang=en_us
+augroup END
+
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
 nnoremap N Nzzzv
